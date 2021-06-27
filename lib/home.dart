@@ -13,15 +13,15 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              padding: EdgeInsets.only(top: 23.5.w),
+              padding: EdgeInsets.only(top: SizerUtil.orientation == Orientation.landscape ? 23.5.w : 23.5.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 65.h,
+                    width: SizerUtil.orientation == Orientation.landscape ? 65.h : 65.w,
                     padding: EdgeInsets.only(bottom: 3.5.h),
                     child: Text(
-                      "Hi, I'm Manak!",
+                      "Hi, I'm Manak! 👋",
                       style: TextStyle(
                         fontFamily: "Chivo",
                         fontWeight: FontWeight.w700,
@@ -31,8 +31,8 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 65.h,
-                    padding: EdgeInsets.only(bottom: 48),
+                    width: SizerUtil.orientation == Orientation.landscape ? 65.h : 65.w,
+                    padding: EdgeInsets.only(bottom: 4.44.h),
                     child: RichText(
                       text: TextSpan(
                         children: <TextSpan>[
@@ -86,7 +86,7 @@ class Home extends StatelessWidget {
                     )
                   ),
                   Container(
-                    width: 65.h,
+                    width: SizerUtil.orientation == Orientation.landscape ? 65.h : 65.w,
                     child: RichText(
                       text: TextSpan(
                         children: <TextSpan>[
@@ -133,7 +133,7 @@ class Home extends StatelessWidget {
                     fontFamily: "Inter",
                     fontWeight: FontWeight.w300,
                     color: Colors.black87,
-                    fontSize: 5.56.sp,
+                    fontSize: 7.5.sp,
                   ),
                 ),
               ),

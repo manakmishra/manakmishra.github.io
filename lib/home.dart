@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class Home extends StatelessWidget {
   
@@ -12,27 +13,25 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height/4.25,
-              ),
+              padding: EdgeInsets.only(top: 23.5.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 1240,
-                    padding: EdgeInsets.only(bottom: 48),
+                    width: 65.h,
+                    padding: EdgeInsets.only(bottom: 3.5.h),
                     child: Text(
                       "Hi, I'm Manak!",
                       style: TextStyle(
                         fontFamily: "Chivo",
                         fontWeight: FontWeight.w700,
                         color: Colors.black,
-                        fontSize: 72,
+                        fontSize: 22.5.sp,
                       ),
                     ),
                   ),
                   Container(
-                    width: 1240,
+                    width: 65.h,
                     padding: EdgeInsets.only(bottom: 48),
                     child: RichText(
                       text: TextSpan(
@@ -43,7 +42,7 @@ class Home extends StatelessWidget {
                               fontFamily: "Chivo",
                               fontWeight: FontWeight.w400,
                               color: Colors.black,
-                              fontSize: 60,
+                              fontSize: 16.67.sp,
                             ),
                           ),
                           TextSpan(
@@ -52,16 +51,16 @@ class Home extends StatelessWidget {
                               fontFamily: "Chivo",
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF0065FF),
-                              fontSize: 60,
+                              fontSize: 16.67.sp,
                             ),
                           ),
                           TextSpan(
-                            text: 'and  ', 
+                            text: 'and ', 
                             style: TextStyle(
                               fontFamily: "Chivo",
                               fontWeight: FontWeight.w400,
                               color: Colors.black,
-                              fontSize: 60,
+                              fontSize: 16.67.sp,
                             ),
                           ),
                           TextSpan(
@@ -70,7 +69,7 @@ class Home extends StatelessWidget {
                               fontFamily: "Chivo",
                               fontWeight: FontWeight.w700,
                               color: Color(0xFFFFA100),
-                              fontSize: 60,
+                              fontSize: 16.67.sp,
                             ),
                           ),
                           TextSpan(
@@ -79,7 +78,7 @@ class Home extends StatelessWidget {
                               fontFamily: "Chivo",
                               fontWeight: FontWeight.w400,
                               color: Colors.black,
-                              fontSize: 60,
+                              fontSize: 16.67.sp,
                             ),
                           ),
                         ],
@@ -87,7 +86,7 @@ class Home extends StatelessWidget {
                     )
                   ),
                   Container(
-                    width: 1240,
+                    width: 65.h,
                     child: RichText(
                       text: TextSpan(
                         children: <TextSpan>[
@@ -97,7 +96,7 @@ class Home extends StatelessWidget {
                               fontFamily: "Inter",
                               fontWeight: FontWeight.w300,
                               color: Colors.black87,
-                              fontSize: 42,
+                              fontSize: 13.33.sp,
                             ),
                           ),
                           TextSpan(
@@ -106,7 +105,7 @@ class Home extends StatelessWidget {
                               fontFamily: "Inter",
                               fontWeight: FontWeight.w300,
                               color: Color(0xFFFF6464),
-                              fontSize: 42,
+                              fontSize: 13.33.sp,
                             ),
                           ),
                           TextSpan(
@@ -115,7 +114,7 @@ class Home extends StatelessWidget {
                               fontFamily: "Inter",
                               fontWeight: FontWeight.w300,
                               color: Colors.black87,
-                              fontSize: 42,
+                              fontSize: 13.33.sp,
                             ),
                           ),
                         ],
@@ -134,7 +133,7 @@ class Home extends StatelessWidget {
                     fontFamily: "Inter",
                     fontWeight: FontWeight.w300,
                     color: Colors.black87,
-                    fontSize: 18,
+                    fontSize: 5.56.sp,
                   ),
                 ),
               ),

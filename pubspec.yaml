@@ -18,3 +18,16 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: Chivo
+      fonts:
+        - asset: assets/fonts/Chivo/Chivo-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Chivo/Chivo-Bold.ttf
+          weight: 700
+
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter/Inter-Light.ttf
+          weight: 300

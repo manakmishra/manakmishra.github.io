@@ -21,10 +21,10 @@ const DarkModeToggle = () => {
             icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
             onClick={toggleColorMode}
             color={iconColor[colorMode]}
-            background={bgColor[colorMode]}
+            variant="ghost"
             _hover={{}}
             isRound={true}
-            size='lg'
+            size={'lg'}
         />
     );
 }

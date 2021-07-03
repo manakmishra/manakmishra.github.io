@@ -42,16 +42,9 @@ const GlobalStyle: React.FC = ({ children }) => {
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={customTheme}>
-      <ColorModeProvider
-        options={{
-          initialColorMode: "light",
-          useSystemColorMode: true
-        }}
-      >
-        <GlobalStyle>
-          <Component {...pageProps} />
-        </GlobalStyle>
-      </ColorModeProvider>
+      <GlobalStyle>
+        <Component {...pageProps} />
+      </GlobalStyle>
     </ChakraProvider>
   );
 }

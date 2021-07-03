@@ -4,11 +4,13 @@ import {
   useColorMode,
   Stack,
   Flex,
-  Heading
+  Box,
+  Link
 } from '@chakra-ui/react'
 import Container from '../components/Container'
+import { Hero } from '../components/Hero';
 
-export default function Home() {
+export default function Index() {
 
   const { colorMode } = useColorMode();
   const colorSecondary = {
@@ -26,19 +28,10 @@ export default function Home() {
         spacing={8}
         justifyContent='center'
         alignItems='flex-start'
-        m='0 auto 4rem auto'
-        maxWidth="1400px"
-        px={2}
+        mx="10vw"
+        mt="10vh"
       >
-        <Flex
-          flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          maxWidth="1400px"
-        >
-          <Heading mb={2}>Hey There! I'm Manak Mishra</Heading>
-          <Text>I’m currently a senior at LNMIIT, Jaipur studying Communication and Computer Engineering. I’m a self taught developer who loves building software and solving problems.</Text>
-        </Flex>
+        <Hero />
       </Stack>
     </Container>
   )

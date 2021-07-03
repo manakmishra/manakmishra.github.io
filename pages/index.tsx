@@ -21,7 +21,7 @@ export default function Index() {
   return (
     <Container>
       <Head>
-            <title>Home - Manak Mishra</title>
+        <title>Home - Manak Mishra</title>
       </Head>
       <Stack
         as="main"

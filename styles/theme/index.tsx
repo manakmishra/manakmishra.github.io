@@ -3,10 +3,11 @@ import { extendTheme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 import { colors } from './colors'
 import { fonts, fontSizes, fontWeights, textStyles } from './typography';
+import { Link } from './components/link';
 
 const config : ThemeConfig = {
-  initialColorMode: "dark",
-  useSystemColorMode: true,
+  initialColorMode: "light",
+  useSystemColorMode: false,
 }
 
 const breakpoints = createBreakpoints({
@@ -16,13 +17,6 @@ const breakpoints = createBreakpoints({
   lg: '80em',
   xl: '80em',
 })
-
-const Link = {
-  baseStyle: {
-    color: '#3CCF91',
-    _hover: { color: '#F6A20E', textDecoration: 'none' },
-  },
-}
 
 const overrides = {
   ...chakraTheme,

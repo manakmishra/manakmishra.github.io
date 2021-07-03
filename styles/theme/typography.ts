@@ -29,7 +29,7 @@ export const textStyles = {
         fontSize: "display",
         fontWeight: "extrabold",
         lineHeight: "95%",
-        letterSpacing: "1%",
+        letterSpacing: "0.01em",
     },
     body: {
         fontSize: "display2",
@@ -44,6 +44,6 @@ export const textStyles = {
     hfLabel: {
         fontSize: "display3",
         fontWeight: "normal",
-        lineHeight: "200%"
+        lineHeight: "125%"
     },
 }

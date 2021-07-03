@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import { ChakraProvider, ColorModeProvider, useColorMode } from "@chakra-ui/react"
+import { ChakraProvider, useColorMode } from "@chakra-ui/react"
 import "@fontsource/poppins/400.css"
 import "@fontsource/poppins/500.css"
 import "@fontsource/poppins/700.css"
@@ -8,14 +8,13 @@ import customTheme from '../styles/theme'
 import {Global, css} from '@emotion/react'
 
 const GlobalStyle: React.FC = ({ children }) => {
-  const { colorMode } = useColorMode()
-
+  const { colorMode } = useColorMode();
   return (
     <>
       <Global
         styles={css`
           ::selection {
-            background-color: #90CDF4;
+            background-color: #90cdf4;
             color: #fefefe;
           }
           ::-moz-selection {
@@ -23,7 +22,7 @@ const GlobalStyle: React.FC = ({ children }) => {
             color: #fefefe;
           }
           html {
-            min-width: 356px;
+            min-width: 360px;
             scroll-behavior: smooth;
           }
           #__next {

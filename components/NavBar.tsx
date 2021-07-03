@@ -13,6 +13,7 @@ import {
   useColorMode,
   useColorModeValue
 } from "@chakra-ui/react";
+import NextLink from 'next/link';
  
 const MenuToggle = ({ toggle, isOpen }: any) => {
   return (
@@ -24,11 +25,13 @@ const MenuToggle = ({ toggle, isOpen }: any) => {
 
 const MenuItem = ({ children, isLast, to = "/", ...props }: any) => {
   return (
-    <Link variant="nav" href={to}>
-      <Text textStyle="hfLabel">
-        {children}
-      </Text>
-    </Link>
+    <NextLink href={to} passHref>
+      <Link variant="nav">
+        <Text textStyle="hfLabel" p={2}>
+          {children}
+        </Text>
+      </Link>
+    </NextLink>
   )
 }
 
@@ -47,7 +50,7 @@ const ColorModeToggle = () => {
           }
           onClick={toggleColorMode}
           color={useColorModeValue('#383A42', '#E5C07B')}
-          variant="icon"
+          variant="ghost"
           _hover={{}}
           isRound={true}
           size={'lg'}
@@ -88,7 +91,7 @@ export const NavBar = (props: any) => {
         flexBasis={{ base: "100%", md: "auto" }}
       >
         <Stack
-          spacing={8}
+          spacing={6}
           align="center"
           justify={["center", "space-between", "flex-end", "flex-end"]}
           direction={["column", "row", "row", "row"]}

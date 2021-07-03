@@ -1,6 +1,5 @@
 import { ThemeComponentProps } from "@chakra-ui/react";
 import { mode } from '@chakra-ui/theme-tools'
-import { fontWeights } from "../typography";
 
 export const Link = {
     baseStyle: {

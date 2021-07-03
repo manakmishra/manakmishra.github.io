@@ -7,7 +7,7 @@ import { Link } from './components/link';
 
 const config : ThemeConfig = {
   initialColorMode: "light",
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 }
 
 const breakpoints = createBreakpoints({

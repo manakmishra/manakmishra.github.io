@@ -11,17 +11,11 @@ import Container from '../components/Container'
 import { Hero } from '../components/Hero';
 
 export default function Index() {
-
-  const { colorMode } = useColorMode();
-  const colorSecondary = {
-    light: '#0184BC',
-    dark: '#61AFEF'
-  }
-
   return (
     <Container>
       <Head>
         <title>Home - Manak Mishra</title>
+        <link rel="shortcut icon" href="/favicon-32x32.png" />
       </Head>
       <Stack
         as="main"
@@ -29,7 +23,7 @@ export default function Index() {
         justifyContent='center'
         alignItems='flex-start'
         mx="10vw"
-        mt="10vh"
+        mt="5vh"
       >
         <Hero />
       </Stack>

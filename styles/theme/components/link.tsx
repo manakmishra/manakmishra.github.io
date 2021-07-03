@@ -1,5 +1,6 @@
 import { ThemeComponentProps } from "@chakra-ui/react";
 import { mode } from '@chakra-ui/theme-tools'
+import { fontWeights } from "../typography";
 
 export const Link = {
     baseStyle: {
@@ -21,6 +22,14 @@ export const Link = {
         _hover: {
           color: mode('cyan.light', 'cyan.dark')(props),
           textDecoration: 'none'
+        }
+      }),
+      nav: (props: ThemeComponentProps) => ({
+        color: mode('foreground.light', 'foreground.dark')(props),
+        textDecoration: 'none',
+        _hover: {
+          color: mode('cyan.light', 'cyan.dark')(props),
+          textDecoration: 'underline',
         }
       }),
     },

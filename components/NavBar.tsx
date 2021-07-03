@@ -24,7 +24,7 @@ const MenuToggle = ({ toggle, isOpen }: any) => {
 
 const MenuItem = ({ children, isLast, to = "/", ...props }: any) => {
   return (
-    <Link href={to}>
+    <Link variant="nav" href={to}>
       <Text textStyle="hfLabel">
         {children}
       </Text>

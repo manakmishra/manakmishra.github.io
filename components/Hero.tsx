@@ -10,10 +10,10 @@ import {
   export const Hero: React.FC = () => {
       return (
           <>
-            <Stack justifyContent="flex-start" alignItems="flex-start">
+            <Stack justifyContent="flex-start" alignItems="flex-start" mb="148px">
                 <Text textStyle="body">Hey There! I'm - </Text>
                 <Text textStyle="name">manak mishra.</Text>
-                <Box width="75%">
+                <Box width={["90vw", "80vw", "75vw", "60vw"]}>
                     <Text mt="60px" textStyle="title">I’m currently a senior at <Link href="https://www.lnmiit.ac.in" variant="primary">LNMIIT Jaipur</Link> studying Communication and Computer Engineering. I’m a self taught developer who loves building software and solving problems.</Text>
                 </Box>
                 <Stack isInline spacing={4}>

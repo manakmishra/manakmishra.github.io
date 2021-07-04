@@ -19,10 +19,10 @@ export const fontWeights = {
 };
   
 export const fontSizes = {
-    display: fluidType(80, 128),
-    display2: fluidType(24, 36),
-    display3: fluidType(20, 24),
-    display4: fluidType(16, 24)
+    display: "100px",
+    display2: "28px",
+    display3: "18px",
+    display4: "20px",
 };
 
 export const textStyles = {

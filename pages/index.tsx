@@ -14,7 +14,7 @@ export default function Index() {
   return (
     <Container>
       <Head>
-        <title>Home - Manak Mishra</title>
+        <title>Manak Mishra</title>
         <link rel="shortcut icon" href="/favicon-32x32.png" />
       </Head>
       <Stack

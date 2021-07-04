@@ -146,7 +146,19 @@ export const NavBar = (props: any) => {
       position="relative"
     >
       <NavMenu />
-      <Logo order={{ md: -1 }} />
+        <NextLink href="/" passHref>
+          <Button
+            order={{ md: -1 }} 
+            aria-label="Go to Home"
+            p={1}
+            variant="ghost"
+            _hover={{
+              color:useColorModeValue('cyan.light', 'cyan.dark')
+            }}
+          >
+            <Logo />
+          </Button>
+        </NextLink>
       <ColorModeToggle />
     </Flex>
   );

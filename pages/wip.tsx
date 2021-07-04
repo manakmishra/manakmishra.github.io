@@ -11,7 +11,7 @@ const UnderConstruction: React.FC = () => {
     return (
         <>
             <Container>
-                <Center h="80vh" w="100vw">
+                <Center h="60vh" w="100vw">
                     <VStack textAlign="center" spacing="4">
                         <Construction boxSize="8rem" />
                             <Text textStyle="wip">

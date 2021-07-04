@@ -32,7 +32,7 @@ import {
   export const Hero: React.FC = () => {
       return (
           <>
-            <Stack justifyContent="flex-start" alignItems="flex-start">
+            <Stack justifyContent="flex-start" alignItems="flex-start" mb={[8, 9, 12, 12]}>
                 <Text textStyle="body">Hey There! I'm - </Text>
                 <Text textStyle="name">manak mishra.</Text>
                 <Box w={{base: "100%", md: "90%", lg: "80%", xl: "60%"}}>

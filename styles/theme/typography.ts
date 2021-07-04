@@ -1,10 +1,3 @@
-const fluidType = (minFont: number, maxFont: number) => {
-    let XX = 768 / 100
-    let YY = (100 * (maxFont - minFont)) / (1920 - 360)
-    let ZZ = minFont / 16
-    return `calc(${ZZ}rem + ((1vw - ${XX}px) * ${YY}))`
-  }
-
 export const fonts = {
     heading: 'Poppins, Tahoma, sans-serif',
     body: 'Poppins, Verdana, sans-serif'
@@ -20,7 +13,7 @@ export const fontWeights = {
 
 export const textStyles = {
     name: {
-        fontSize: {base: '96px', md: '100px'},
+        fontSize: {base: '72px', md: '80px', xl: '100px'},
         fontWeight: "extrabold",
         lineHeight: "95%",
         letterSpacing: "0.01em",

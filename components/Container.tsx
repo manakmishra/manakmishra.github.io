@@ -18,7 +18,7 @@ const Container: React.FC = ({ children }) => {
                 flexDirection="column"
                 bg={useColorModeValue('background.light', 'background.dark')}
                 color={useColorModeValue('foreground.light', 'foreground.dark')}
-                mt={[24, 24, 32, 32]}
+                mt={[20, 24, 32, 32]}
             >
                 { children }
             </Flex>

@@ -10,18 +10,21 @@ import {
   import { GoLinkExternal } from 'react-icons/go';
 
   const SocialLink = ({ icon, to }: any) => (
-     <Link href={to} onMouseEnter={(() => icon=GoLinkExternal)}>
+     <Link href={to} target="_blank" >
         <Icon
             aria-label="Toggle color mode"
             variant="ghost"
-            as={icon} 
+            as={icon}
             width={9}
             height={9}
-            mx={2}
+            m={2}
             color={useColorModeValue('foreground.light', 'foreground.dark')}
             backgroundColor="transparent"
             _hover={{
                 color: useColorModeValue('cyan.light', 'cyan.dark'),
+                margin: "6px",
+                width: "40px",
+                height: "40px"
             }}
         />
     </Link>

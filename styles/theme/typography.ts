@@ -23,6 +23,7 @@ export const fontSizes = {
     display2: "28px",
     display3: "18px",
     display4: "20px",
+    wip: fluidType(24,56),
 };
 
 export const textStyles = {
@@ -52,4 +53,9 @@ export const textStyles = {
         fontWeight: "normal",
         lineHeight: "125%"
     },
+    wip: {
+        fontSize: "wip",
+        fontWeight: "medium",
+        lineHeight: "125%"
+    }
 }

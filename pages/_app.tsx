@@ -22,6 +22,7 @@ const GlobalStyle: React.FC = ({ children }) => {
             color: #fefefe;
           }
           html {
+            width: 100vw;
             min-width: 360px;
             scroll-behavior: smooth;
           }
@@ -30,6 +31,14 @@ const GlobalStyle: React.FC = ({ children }) => {
             flex-direction: column;
             min-height: 100vh;
             background: ${colorMode === 'light' ? '#FAFAFA' : '#282C34'};
+          }
+          ::-webkit-scrollbar {
+            width: 8px;
+            background: ${colorMode === 'light' ? '#FAFAFA' : '#282C34'};
+          }
+          ::-webkit-scrollbar-thumb {
+            background: ${colorMode === 'light' ? '#FAFAFA' : '#282C34'};
+            border-radius: 8px;
           }
         `}
       />

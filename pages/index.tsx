@@ -1,14 +1,7 @@
 import Head from 'next/head'
-import {
-  Text, 
-  useColorMode,
-  Stack,
-  Flex,
-  Box,
-  Link
-} from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
 import Container from '../components/Container'
-import { Hero } from '../components/Hero';
+import { Hero } from './hero';
 
 export default function Index() {
   return (

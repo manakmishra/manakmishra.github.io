@@ -2,7 +2,7 @@ import { theme as chakraTheme, ThemeConfig } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 import { colors } from './colors'
-import { fonts, fontSizes, fontWeights, textStyles } from './typography';
+import { fonts, fontWeights, textStyles } from './typography';
 import { Link } from './components/link';
 
 const config : ThemeConfig = {
@@ -11,12 +11,10 @@ const config : ThemeConfig = {
 }
 
 const breakpoints = createBreakpoints({
-  base: '0em',
   sm: '30em',
   md: '48em',
   lg: '62em',
-  xl: '80em',
-  '2xl': '96em'
+  xl: '80em'
 })
 
 const overrides = {
@@ -27,7 +25,6 @@ const overrides = {
   },
   colors,
   fonts,
-  fontSizes,
   fontWeights,
   textStyles,
   breakpoints

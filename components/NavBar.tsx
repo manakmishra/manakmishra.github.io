@@ -153,6 +153,7 @@ export const NavBar = (props: any) => {
             p={1}
             variant="ghost"
             _hover={{
+              variant:"ghost",
               color:useColorModeValue('cyan.light', 'cyan.dark')
             }}
           >

@@ -1,6 +1,6 @@
 const fluidType = (minFont: number, maxFont: number) => {
     let XX = 768 / 100
-    let YY = (100 * (maxFont - minFont)) / (1920 - 768)
+    let YY = (100 * (maxFont - minFont)) / (1920 - 360)
     let ZZ = minFont / 16
     return `calc(${ZZ}rem + ((1vw - ${XX}px) * ${YY}))`
   }
@@ -21,7 +21,8 @@ export const fontWeights = {
 export const fontSizes = {
     display: fluidType(96, 124),
     display2: fluidType(24, 36),
-    display3: fluidType(16, 24),
+    display3: fluidType(22, 24),
+    display4: fluidType(16, 24)
 };
 
 export const textStyles = {
@@ -41,7 +42,12 @@ export const textStyles = {
         fontWeight: "bold",
         lineHeight: "140%"
     },
-    hfLabel: {
+    fLabel: {
+        fontSize: "display4",
+        fontWeight: "normal",
+        lineHeight: "125%"
+    },
+    navBarLabel: {
         fontSize: "display3",
         fontWeight: "normal",
         lineHeight: "125%"

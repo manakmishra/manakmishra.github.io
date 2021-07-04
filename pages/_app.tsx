@@ -22,6 +22,7 @@ const GlobalStyle: React.FC = ({ children }) => {
             color: #fefefe;
           }
           html {
+            width: 100vw;
             min-width: 360px;
             scroll-behavior: smooth;
           }

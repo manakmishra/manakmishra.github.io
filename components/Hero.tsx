@@ -10,7 +10,7 @@ import {
   import { GoLinkExternal } from 'react-icons/go';
 
   const SocialLink = ({ icon, to }: any) => (
-     <Link href={to} target="_blank" >
+     <Link href={to} isExternal>
         <Icon
             aria-label="Toggle color mode"
             variant="ghost"
@@ -37,7 +37,7 @@ import {
                 <Text textStyle="body">Hey There! I'm - </Text>
                 <Text textStyle="name">manak mishra.</Text>
                 <Box width={["90vw", "80vw", "75vw", "60vw"]}>
-                    <Text mt="60px" mb="32px" textStyle="title">I’m currently a senior at <Link href="https://www.lnmiit.ac.in" variant="primary">LNMIIT Jaipur</Link> studying Communication and Computer Engineering. I’m a self taught developer who loves building software and solving problems.</Text>
+                    <Text mt="60px" mb="32px" textStyle="title">I’m currently a senior at <Link href="https://www.lnmiit.ac.in" variant="primary" isExternal>LNMIIT Jaipur</Link> studying Communication and Computer Engineering. I’m a self taught developer who loves building software and solving problems.</Text>
                 </Box>
                 <Stack isInline spacing={6}>
                     <SocialLink icon={FaGithub} to="https://www.github.com/manakmishra" />

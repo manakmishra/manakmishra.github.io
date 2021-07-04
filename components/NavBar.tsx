@@ -1,6 +1,5 @@
 import React from "react";
-import { HiMenuAlt4 } from 'react-icons/hi';
-import { GrClose } from 'react-icons/gr';
+import { HiMenuAlt2, HiOutlineX } from 'react-icons/hi';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { Logo } from './svg';
 import { 
@@ -9,65 +8,29 @@ import {
   Text,
   Flex,
   Stack,
-  VStack,
   useColorMode,
   useColorModeValue,
-  Button
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  useDisclosure
 } from "@chakra-ui/react";
 import NextLink from 'next/link';
- 
-const MenuToggle = ({ toggle, isOpen }: any) => {
-  return (
-    <Button 
-      aria-label="Open Navigation Menu"
-      display={{ base: "block", md: "none" }} 
-      onClick={toggle}
-      variant="ghost"
-      p={1}
-    >
-      {
-        isOpen ? (
-          <GrClose size="1.75rem" fill={useColorModeValue('foreground.light', 'foreground.dark')} /> 
-        ) : (
-          <HiMenuAlt4 size="1.75rem" color={useColorModeValue('foreground.light', 'foreground.dark')} />
-        )
-      }
-    </Button>
-  );
-}
 
-const MenuItem = ({ children, isLast, to = "/", ...props }: any) => {
+const MenuItem = ({ children, isLast, to = "/" }: any) => {
   return (
     <NextLink href={to} passHref>
       <Link variant="nav">
-        <Text textStyle="hfLabel" px={6} py={1}>
+        <Text textStyle="navBarLabel" px={6} py={1}>
           {children}
         </Text>
       </Link>
     </NextLink>
   )
 }
-
-const MenuLinks = ({ isOpen = false }) => {
-  return (
-    <Box
-      display={{ base: isOpen ? "block" : "none", md: "block" }}
-      flexBasis={{ base: "100%", md: "auto" }}
-    >
-      <Stack
-        spacing={6}
-        align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
-        direction={["column", "row", "row", "row"]}
-        pt={[4, 4, 0, 0]}
-      >
-        <MenuItem to="#">projects</MenuItem>
-        <MenuItem to="#">about</MenuItem>
-        <MenuItem to="#" isLast>resume</MenuItem>
-      </Stack>
-    </Box>
-  );
-};
 
 const ColorModeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -90,37 +53,100 @@ const ColorModeToggle = () => {
   );
 }
 
-const NavBarContainer = ({ children, isOpen, ...props }: any) => {
+const FullNav = ({ children, ...props }: any) => {
   return (
-    <Flex
-      as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      w="100%"
-      mb={isOpen ? { base: 1 } : { base: 1, lg: 2 }}
-      py={8}
-      px={[4, 4, 16, 16]}
-      bg={useColorModeValue('background.light', 'background.dark')}
-      color={useColorModeValue('foreground.light', 'foreground.dark')}
+    <Stack
+      as="ul"
       {...props}
+      direction="row"
+      display={{ base: "none", md: "flex" }}
     >
       {children}
-    </Flex>
-  )
-}
+    </Stack>
+  );
+};
 
-
-export const NavBar = (props: any) => {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const toggle = () => setIsOpen(!isOpen)
+const SideNav = ({ toRef, children }: any) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   return (
-    <NavBarContainer isOpen={isOpen} {...props}>
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <Logo />
-      <MenuLinks isOpen={isOpen} />
+    <>
+      <Button
+        aria-label="Open Navigation Drawer"
+        ref={btnRef.current}
+        onClick={onOpen}
+        display={{ base: "block", md: "none" }}
+        variant="ghost"
+        p={1}
+      >
+        <HiMenuAlt2 size="1.75rem" />
+      </Button>
+      <Drawer
+        finalFocusRef={toRef}
+        placement="left"
+        onClose={onClose}
+        isOpen={isOpen}
+      >
+        <DrawerOverlay>
+          <DrawerContent bg={useColorModeValue('background.light', 'background.dark')}>
+            <DrawerHeader border="none" pt={6}>
+              <Button
+                aria-label="Close Navigation Drawer"
+                onClick={onClose}
+                variant="ghost"
+                p={1}
+              >
+                <HiOutlineX size="1.75rem" />
+              </Button>
+            </DrawerHeader>
+            <DrawerBody>
+              <Stack py="4em" mx="auto" as="ul" spacing={8}>
+                {children}
+              </Stack>
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
+      </Drawer>
+    </>
+  );
+};
+
+const NavMenu = ({ onOpen, ...props }: any) => {
+  const { isOpen, onClose } = useDisclosure();
+  const [toRef, setToRef] = React.useState();
+
+  return (
+    <Box as="nav">
+      <FullNav {...props}>
+        <MenuItem to="#">projects</MenuItem>
+        <MenuItem to="#">about</MenuItem>
+        <MenuItem to="#" isLast>resume</MenuItem>
+      </FullNav>
+      <SideNav toRef={toRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
+        <MenuItem to="#">projects</MenuItem>
+        <MenuItem to="#">about</MenuItem>
+        <MenuItem to="#" isLast>resume</MenuItem>
+      </SideNav>
+    </Box>
+  );
+}
+
+export const NavBar = (props: any) => {
+  return (
+    <Flex
+      m="auto"
+      p=".5em"
+      w={{ base: "95%", md: "90%", lg: "85%" }}
+      my="3"
+      justify="space-between"
+      align="center"
+      direction="row"
+      position="relative"
+    >
+      <NavMenu />
+      <Logo order={{ md: -1 }} />
       <ColorModeToggle />
-    </NavBarContainer>
-  )
+    </Flex>
+  );
 }

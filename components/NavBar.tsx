@@ -9,17 +9,30 @@ import {
   Text,
   Flex,
   Stack,
-  IconButton,
+  VStack,
   useColorMode,
-  useColorModeValue
+  useColorModeValue,
+  Button
 } from "@chakra-ui/react";
 import NextLink from 'next/link';
  
 const MenuToggle = ({ toggle, isOpen }: any) => {
   return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
-      {isOpen ? <GrClose /> : <HiMenuAlt4 />}
-    </Box>
+    <Button 
+      aria-label="Open Navigation Menu"
+      display={{ base: "block", md: "none" }} 
+      onClick={toggle}
+      variant="ghost"
+      p={1}
+    >
+      {
+        isOpen ? (
+          <GrClose size="1.75rem" fill={useColorModeValue('foreground.light', 'foreground.dark')} /> 
+        ) : (
+          <HiMenuAlt4 size="1.75rem" color={useColorModeValue('foreground.light', 'foreground.dark')} />
+        )
+      }
+    </Button>
   );
 }
 
@@ -27,7 +40,7 @@ const MenuItem = ({ children, isLast, to = "/", ...props }: any) => {
   return (
     <NextLink href={to} passHref>
       <Link variant="nav">
-        <Text textStyle="hfLabel" p={2}>
+        <Text textStyle="hfLabel" px={6} py={1}>
           {children}
         </Text>
       </Link>
@@ -35,40 +48,59 @@ const MenuItem = ({ children, isLast, to = "/", ...props }: any) => {
   )
 }
 
+const MenuLinks = ({ isOpen = false }) => {
+  return (
+    <Box
+      display={{ base: isOpen ? "block" : "none", md: "block" }}
+      flexBasis={{ base: "100%", md: "auto" }}
+    >
+      <Stack
+        spacing={6}
+        align="center"
+        justify={["center", "space-between", "flex-end", "flex-end"]}
+        direction={["column", "row", "row", "row"]}
+        pt={[4, 4, 0, 0]}
+      >
+        <MenuItem to="#">projects</MenuItem>
+        <MenuItem to="#">about</MenuItem>
+        <MenuItem to="#" isLast>resume</MenuItem>
+      </Stack>
+    </Box>
+  );
+};
+
 const ColorModeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-
   return (
-      <IconButton 
+      <Button 
           aria-label={colorMode === 'light' ? 'Toggle dark mode' : 'Toggle light Mode'}
-          icon={
-            colorMode === 'light' ? (
-              <FaMoon size="1.75rem" />
-            ) : (
-              <FaSun size="1.75rem" />
-            )
-          }
           onClick={toggleColorMode}
           color={useColorModeValue('#383A42', '#E5C07B')}
+          p={1}
           variant="ghost"
-          _hover={{}}
-          isRound={true}
-          size={'lg'}
-      />
+      >
+        {
+          colorMode === 'light' ? (
+            <FaMoon size="1.75rem" />
+          ) : (
+            <FaSun size="1.75rem" />
+          )
+        }  
+      </Button>
   );
 }
 
-const NavBarContainer = ({ children, ...props }: any) => {
+const NavBarContainer = ({ children, isOpen, ...props }: any) => {
   return (
     <Flex
-      position="sticky"
       as="nav"
       align="center"
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={8}
-      p={8}
+      mb={isOpen ? { base: 1 } : { base: 1, lg: 2 }}
+      py={8}
+      px={[4, 4, 16, 16]}
       bg={useColorModeValue('background.light', 'background.dark')}
       color={useColorModeValue('foreground.light', 'foreground.dark')}
       {...props}
@@ -78,30 +110,16 @@ const NavBarContainer = ({ children, ...props }: any) => {
   )
 }
 
+
 export const NavBar = (props: any) => {
   const [isOpen, setIsOpen] = React.useState(false)
   const toggle = () => setIsOpen(!isOpen)
 
   return (
-    <NavBarContainer {...props}>
-      <Logo />
+    <NavBarContainer isOpen={isOpen} {...props}>
       <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <Box
-        display={{ base: isOpen ? "block" : "none", md: "block" }}
-        flexBasis={{ base: "100%", md: "auto" }}
-      >
-        <Stack
-          spacing={6}
-          align="center"
-          justify={["center", "space-between", "flex-end", "flex-end"]}
-          direction={["column", "row", "row", "row"]}
-          pt={[4, 4, 0, 0]}
-        >
-          <MenuItem to="#">projects</MenuItem>
-          <MenuItem to="#">about</MenuItem>
-          <MenuItem to="#" isLast>resume</MenuItem>
-        </Stack>
-      </Box>
+      <Logo />
+      <MenuLinks isOpen={isOpen} />
       <ColorModeToggle />
     </NavBarContainer>
   )

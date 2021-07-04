@@ -6,6 +6,8 @@ import {
 import Footer from './Footer';
 import { NavBar } from './NavBar';
 
+//Temporarily removed footer from container
+
 const Container: React.FC = ({ children }) => {
     return (
         <>
@@ -16,12 +18,10 @@ const Container: React.FC = ({ children }) => {
                 flexDirection="column"
                 bg={useColorModeValue('background.light', 'background.dark')}
                 color={useColorModeValue('foreground.light', 'foreground.dark')}
-                px={[0, 4, 4]}
-                mt={[4, 8, 8]}
+                mt={[24, 24, 32, 32]}
             >
                 { children }
             </Flex>
-            <Footer />
         </>
     );
 }

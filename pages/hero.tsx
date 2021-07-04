@@ -32,11 +32,11 @@ import {
   export const Hero: React.FC = () => {
       return (
           <>
-            <Stack justifyContent="flex-start" alignItems="flex-start" mb={{base: 2, sm: 4, md: 6, lg:10, xl:16}}>
+            <Stack justifyContent="flex-start" alignItems="flex-start">
                 <Text textStyle="body">Hey There! I'm - </Text>
                 <Text textStyle="name">manak mishra.</Text>
-                <Box w={{base: "100%", lg: "70%"}}>
-                    <Text my={[5, 7, 9, 9]} textStyle="title">I’m currently a senior at <Link href="https://www.lnmiit.ac.in" variant="primary" isExternal>LNMIIT Jaipur</Link> studying Communication and Computer Engineering. I’m a self taught developer who loves building software and solving problems.</Text>
+                <Box w={{base: "100%", md: "90%", lg: "80%", xl: "60%"}}>
+                    <Text mt={[8, 9, 20, 20]} mb={8} textStyle="title">I’m currently a senior at <Link href="https://www.lnmiit.ac.in" variant="primary" isExternal>LNMIIT Jaipur</Link> studying Communication and Computer Engineering. I’m a self taught developer who loves building software and solving problems.</Text>
                 </Box>
                 <Stack isInline spacing={6} alignSelf={{base: "center", md: "flex-start"}}>
                     <SocialLink icon={FaGithub} to="https://www.github.com/manakmishra" />

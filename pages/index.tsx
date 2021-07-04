@@ -16,7 +16,6 @@ export default function Index() {
         justifyContent='center'
         alignItems='flex-start'
         mx={{ base: "2.5vw", md: "5vw", lg: "7.5vw" }}
-        mt={{ base: "2vh", md: "5vw", lg:"6vw" }}
       >
         <Hero />
       </Stack>

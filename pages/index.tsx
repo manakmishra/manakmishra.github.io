@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Stack } from '@chakra-ui/react'
 import Container from '../components/Container'
-import { Hero } from './hero';
+import { Hero } from '../components/hero';
 
 export default function Index() {
   return (

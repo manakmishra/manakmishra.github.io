@@ -28,9 +28,7 @@ yarn
 
 - Fire up the development server by running:
 
-```bash
-npm run dev
-# or
+```sh
 yarn dev
 ```
 

@@ -68,6 +68,7 @@ const FullNav = ({ children, ...props }: any) => {
 
 const SideNav = ({ toRef, children }: any) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const drawerBackground = useColorModeValue('background.light', 'background.dark');
   const btnRef = React.useRef();
 
   return (
@@ -89,7 +90,7 @@ const SideNav = ({ toRef, children }: any) => {
         isOpen={isOpen}
       >
         <DrawerOverlay>
-          <DrawerContent bg={useColorModeValue('background.light', 'background.dark')}>
+          <DrawerContent bg={drawerBackground}>
             <DrawerHeader border="none" pt={6}>
               <Button
                 aria-label="Close Navigation Drawer"
@@ -137,8 +138,8 @@ export const NavBar = (props: any) => {
     <Flex
       m="auto"
       p=".5em"
-      w={{ base: "95%", md: "90%", lg: "85%" }}
-      my="3"
+      w={{ base: "95vw", md: "90vw", lg: "85vw" }}
+      my={3}
       justify="space-between"
       align="center"
       direction="row"

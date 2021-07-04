@@ -19,9 +19,9 @@ export const fontWeights = {
 };
   
 export const fontSizes = {
-    display: fluidType(96, 124),
+    display: fluidType(80, 128),
     display2: fluidType(24, 36),
-    display3: fluidType(22, 24),
+    display3: fluidType(20, 24),
     display4: fluidType(16, 24)
 };
 

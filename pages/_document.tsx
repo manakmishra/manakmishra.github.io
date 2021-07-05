@@ -5,6 +5,7 @@ export default class MyDocument extends NextDocument {
     render() {
         return (
             <Html lang="en">
+                <link href="https://api.fontshare.com/css?f[]=chillax@600&display=swap" rel="stylesheet" />
                 <Head />
                 <body>
                     <ColorModeScript initialColorMode={theme.config.initialColorMode}/>

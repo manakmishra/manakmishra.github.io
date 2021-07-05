@@ -17,7 +17,7 @@ export const textStyles = {
         fontSize: fluidType(80, 128),
         fontFamily: "Chillax",
         fontWeight: "semibold",
-        lineHeight: "95%",
+        lineHeight: "110%",
         letterSpacing: "-0.0525em"
     },
     body: {
@@ -37,8 +37,7 @@ export const textStyles = {
     },
     navBarLabel: {
         fontSize: {base: '22px', md: fluidType(18, 22)},
-        fontWeight: "normal",
-        lineHeight: "125%"
+        fontWeight: "normal"
     },
     wip: {
         fontSize: fluidType(24, 48),

@@ -22,7 +22,7 @@ import NextLink from 'next/link';
 import { clamp } from "../hooks/FluidResponsive";
 import styled from "@emotion/styled";
 
-const MenuItem = ({ children, isLast, to = "/" }: any) => {
+const MenuItem = ({ children, to = "/" }: any) => {
   return (
     <NextLink href={to} passHref>
       <Link variant="nav">
@@ -91,7 +91,7 @@ const SideNav = ({ toRef, children }: any) => {
         onClose={onClose}
         isOpen={isOpen}
       >
-        <DrawerOverlay>
+        <DrawerOverlay >
           <DrawerContent bg={drawerBackground}>
             <DrawerHeader border="none" pt={6}>
               <Button
@@ -124,12 +124,12 @@ const NavMenu = ({ onOpen, ...props }: any) => {
       <FullNav {...props}>
         <MenuItem to="/wip">projects</MenuItem>
         <MenuItem to="/wip">about</MenuItem>
-        <MenuItem to="/wip" isLast>resume</MenuItem>
+        <MenuItem to="/wip">resume</MenuItem>
       </FullNav>
       <SideNav toRef={toRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
         <MenuItem to="/wip">projects</MenuItem>
         <MenuItem to="/wip">about</MenuItem>
-        <MenuItem to="/wip" isLast>resume</MenuItem>
+        <MenuItem to="/wip">resume</MenuItem>
       </SideNav>
     </Box>
   );
@@ -139,7 +139,7 @@ const StickyNav = styled(Flex)`
   position: sticky;
   z-index: 99;
   top: 0;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   transition: height .5s, line-height .5s;
 `;
 

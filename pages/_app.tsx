@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app'
 import { ChakraProvider, useColorMode } from "@chakra-ui/react"
-import "@fontsource/ubuntu/700.css"
 import "@fontsource/dm-sans/400.css"
 import "@fontsource/dm-sans/500.css"
 import "@fontsource/dm-sans/700.css"
@@ -14,12 +13,12 @@ const GlobalStyle: React.FC = ({ children }) => {
       <Global
         styles={css`
           ::selection {
-            background-color: #90cdf4;
-            color: #fefefe;
+            background-color: #5465ff;
+            color: #fafafa;
           }
           ::-moz-selection {
-            background: #ffb7b7;
-            color: #fefefe;
+            background-color: #5465ff;
+            color: #fafafa;
           }
           html {
             width: 100vw;

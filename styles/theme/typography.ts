@@ -8,15 +8,17 @@ export const fonts = {
 export const fontWeights = {
     normal: 400,
     medium: 500,
+    semibold: 600,
     bold: 700
 };
 
 export const textStyles = {
     name: {
         fontSize: fluidType(80, 128),
-        fontFamily: "Ubuntu",
-        fontWeight: "bold",
+        fontFamily: "Chillax",
+        fontWeight: "semibold",
         lineHeight: "95%",
+        letterSpacing: "-0.0525em"
     },
     body: {
         fontSize: fluidType(24, 32),

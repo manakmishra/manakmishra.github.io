@@ -20,6 +20,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from 'next/link';
 import { clamp } from "../hooks/FluidResponsive";
+import styled from "@emotion/styled";
 
 const MenuItem = ({ children, isLast, to = "/" }: any) => {
   return (
@@ -134,16 +135,23 @@ const NavMenu = ({ onOpen, ...props }: any) => {
   );
 }
 
+const StickyNav = styled(Flex)`
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  backdrop-filter: blur(20px);
+  transition: height .5s, line-height .5s;
+`;
+
 export const NavBar = (props: any) => {
   return (
-    <Flex
-      p=".5em"
-      my={3}
-      mx={`calc(${clamp(1.5, 6.5, 7)} - 16px )`}
-      justify="space-between"
-      align="center"
-      direction="row"
-      position="relative"
+    <StickyNav
+      py={`calc(12px + 1em)`}
+      px={`calc(${clamp(1.5, 6.5, 7)} - 16px + 0.5em)`}
+      mt={{base: '0', md: '1.25rem'}}
+      justifyContent="space-between"
+      alignItems="center"
+      flexDirection="row"
     >
       <NavMenu />
         <NextLink href="/" passHref>
@@ -161,6 +169,6 @@ export const NavBar = (props: any) => {
           </Button>
         </NextLink>
       <ColorModeToggle />
-    </Flex>
+    </StickyNav>
   );
 }

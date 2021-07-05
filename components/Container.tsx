@@ -19,7 +19,7 @@ const Container: React.FC = ({ children }) => {
                 flexDirection="column"
                 bg={useColorModeValue('background.light', 'background.dark')}
                 color={useColorModeValue('foreground.light', 'foreground.dark')}
-                mt={clamp(3, 8.33, 8.25)}
+                mt={clamp(3, 8.33, 7)}
             >
                 { children }
             </Flex>

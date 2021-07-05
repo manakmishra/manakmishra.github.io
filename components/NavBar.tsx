@@ -39,7 +39,7 @@ const ColorModeToggle = () => {
           aria-label={colorMode === 'light' ? 'Toggle dark mode' : 'Toggle light Mode'}
           onClick={toggleColorMode}
           color={useColorModeValue('#383A42', '#E5C07B')}
-          p={1}
+          p={2}
           variant="ghost"
       >
         {
@@ -79,7 +79,7 @@ const SideNav = ({ toRef, children }: any) => {
         onClick={onOpen}
         display={{ base: "block", md: "none" }}
         variant="ghost"
-        p={1}
+        p={2}
       >
         <HiMenuAlt2 size="1.75rem" />
       </Button>
@@ -96,7 +96,7 @@ const SideNav = ({ toRef, children }: any) => {
                 aria-label="Close Navigation Drawer"
                 onClick={onClose}
                 variant="ghost"
-                p={1}
+                p={2}
               >
                 <HiOutlineX size="1.75rem" />
               </Button>
@@ -136,10 +136,9 @@ const NavMenu = ({ onOpen, ...props }: any) => {
 export const NavBar = (props: any) => {
   return (
     <Flex
-      m="auto"
       p=".5em"
-      w={{ base: "95vw", md: "90vw", lg: "85vw" }}
       my={3}
+      mx={[2,10,20,24]}
       justify="space-between"
       align="center"
       direction="row"
@@ -150,7 +149,7 @@ export const NavBar = (props: any) => {
           <Button
             order={{ md: -1 }} 
             aria-label="Go to Home"
-            p={1}
+            p={2}
             variant="ghost"
             _hover={{
               variant:"ghost",

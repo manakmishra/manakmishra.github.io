@@ -4,6 +4,7 @@ import "@fontsource/poppins/400.css"
 import "@fontsource/poppins/500.css"
 import "@fontsource/poppins/700.css"
 import "@fontsource/poppins/800.css"
+import "@fontsource/ubuntu/700.css"
 import customTheme from '../styles/theme'
 import {Global, css} from '@emotion/react'
 

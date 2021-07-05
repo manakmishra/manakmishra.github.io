@@ -19,6 +19,7 @@ import {
   useDisclosure
 } from "@chakra-ui/react";
 import NextLink from 'next/link';
+import { clamp } from "../hooks/FluidResponsive";
 
 const MenuItem = ({ children, isLast, to = "/" }: any) => {
   return (
@@ -138,7 +139,7 @@ export const NavBar = (props: any) => {
     <Flex
       p=".5em"
       my={3}
-      mx={[2,10,20,24]}
+      mx={`calc(${clamp(1.5, 6.5, 7)} - 16px )`}
       justify="space-between"
       align="center"
       direction="row"

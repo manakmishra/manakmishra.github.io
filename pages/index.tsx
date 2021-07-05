@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Stack } from '@chakra-ui/react'
 import Container from '../components/Container'
 import { Hero } from '../components/hero';
+import { clamp } from '../hooks/FluidResponsive';
 
 export default function Index() {
   return (
@@ -15,7 +16,7 @@ export default function Index() {
         spacing={8}
         justifyContent='center'
         alignItems='flex-start'
-        mx={[6,14,24,28]}
+        mx={clamp(1.5, 6.5, 7)}
       >
         <Hero />
       </Stack>

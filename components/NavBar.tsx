@@ -70,7 +70,7 @@ const FullNav = ({ children, ...props }: any) => {
 
 const SideNav = ({ toRef, children }: any) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const drawerBackground = useColorModeValue('background.light', 'background.dark');
+  const drawerBackground = useColorModeValue('white.light', 'black.dark');
   const btnRef = React.useRef();
 
   return (

@@ -1,15 +1,14 @@
 import { fluidType } from "../../hooks/FluidResponsive";
 
 export const fonts = {
-    heading: 'Poppins, Tahoma, sans-serif',
-    body: 'Poppins, Verdana, sans-serif'
+    heading: 'DM Sans, Tahoma, sans-serif',
+    body: 'DM Sans, Verdana, sans-serif'
 }
 
 export const fontWeights = {
     normal: 400,
     medium: 500,
-    bold: 700,
-    extrabold: 800
+    bold: 700
 };
 
 export const textStyles = {
@@ -18,16 +17,15 @@ export const textStyles = {
         fontFamily: "Ubuntu",
         fontWeight: "bold",
         lineHeight: "95%",
-        letterSpacing: "0.01em",
     },
     body: {
         fontSize: fluidType(24, 32),
-        fontWeight: "medium",
+        fontWeight: "normal",
         lineHeight: "125%"
     },
     title: {
         fontSize: fluidType(24, 32),
-        fontWeight: "bold",
+        fontWeight: "normal",
         lineHeight: "140%"
     },
     fLabel: {
@@ -36,12 +34,12 @@ export const textStyles = {
         lineHeight: "125%"
     },
     navBarLabel: {
-        fontSize: {base: '20px', md: fluidType(18, 21)},
+        fontSize: {base: '22px', md: fluidType(18, 22)},
         fontWeight: "normal",
         lineHeight: "125%"
     },
     wip: {
-        fontSize: fluidType(24, 56),
+        fontSize: fluidType(24, 48),
         fontWeight: "medium",
         lineHeight: "125%"
     }

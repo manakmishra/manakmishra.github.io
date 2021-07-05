@@ -743,10 +743,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/poppins@^4.4.5":
+"@fontsource/dm-sans@^4.4.5":
   version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.4.5.tgz#c75dcc453f7a9381de3f9b932366c2457887184c"
-  integrity sha512-pu675yvBGFhAHD8D7uj7C0NaHqDxD7mlgmLM8ziyYL4kYH79fil7rJ6U5X2oaKxoyRk3rxxb9k1fG0CCc7CquA==
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-4.4.5.tgz#d39b00f12cdcd72d403d5458c39ace8d8bdd60eb"
+  integrity sha512-GhRMo659+nxsHwhF1pWZD1G/9irQC0eWGCbfTpp3qTbN+JdcdhkXhYGgBVSk0jwpqjtidLkx/14wrQwJfVIsSQ==
 
 "@fontsource/ubuntu@^4.4.5":
   version "4.4.5"

@@ -7,7 +7,7 @@ import {
     useColorModeValue
 } from '@chakra-ui/react';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { fluidType, clamp } from '../hooks/FluidResponsive';
+import { clamp } from '../hooks/FluidResponsive';
 
   const SocialLink = ({ icon, to }: any) => (
      <Link href={to} isExternal>
@@ -41,7 +41,7 @@ import { fluidType, clamp } from '../hooks/FluidResponsive';
                 <Box>
                     <Text 
                         w={{base: "100%", md: "90%", lg: "80%", xl: "60%"}} 
-                        mt={clamp(1.5, 6.67, 4)}
+                        mt={clamp(1.5, 6.67, 2.125)}
                         mb={8} 
                         textStyle="title"
                     >

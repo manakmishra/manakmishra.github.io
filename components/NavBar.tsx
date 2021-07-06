@@ -122,14 +122,14 @@ const NavMenu = ({ onOpen, ...props }: any) => {
   return (
     <Box as="nav">
       <FullNav {...props}>
-        <MenuItem to="/wip">projects</MenuItem>
-        <MenuItem to="/wip">about</MenuItem>
-        <MenuItem to="/wip">resume</MenuItem>
+        <MenuItem to="/projects">projects</MenuItem>
+        <MenuItem to="/about">about</MenuItem>
+        <MenuItem to="#">resume</MenuItem>
       </FullNav>
       <SideNav toRef={toRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-        <MenuItem to="/wip">projects</MenuItem>
-        <MenuItem to="/wip">about</MenuItem>
-        <MenuItem to="/wip">resume</MenuItem>
+        <MenuItem to="/projects">projects</MenuItem>
+        <MenuItem to="/about">about</MenuItem>
+        <MenuItem to="#">resume</MenuItem>
       </SideNav>
     </Box>
   );

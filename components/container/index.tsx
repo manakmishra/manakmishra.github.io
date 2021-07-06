@@ -32,6 +32,7 @@ const Container: React.FC = ({ children }) => {
                     { children }
                 </Stack>
             </Flex>
+            <Footer />
         </>
     );
 }

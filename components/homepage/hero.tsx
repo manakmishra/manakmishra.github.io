@@ -9,26 +9,26 @@ import {
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { clamp } from '../../hooks/FluidResponsive';
 
-  const SocialLink = ({ icon, to }: any) => (
-     <Link href={to} isExternal>
-        <Icon
-            aria-label="Toggle color mode"
-            variant="ghost"
-            as={icon}
-            width={9}
-            height={9}
-            m={2}
-            color={useColorModeValue('foreground.light', 'foreground.dark')}
-            backgroundColor="transparent"
-            _hover={{
-                color: useColorModeValue('cyan.light', 'cyan.dark'),
-                margin: "4px",
-                width: "44px",
-                height: "44px",
-            }}
-        />
-    </Link>
-  )
+const SocialLink = ({ icon, to }: any) => (
+    <Link href={to} isExternal>
+    <Icon
+        aria-label="Toggle color mode"
+        variant="ghost"
+        as={icon}
+        width={9}
+        height={9}
+        m={2}
+        color={useColorModeValue('foreground.light', 'foreground.dark')}
+        backgroundColor="transparent"
+        _hover={{
+            color: useColorModeValue('cyan.light', 'cyan.dark'),
+            margin: "4px",
+            width: "44px",
+            height: "44px",
+        }}
+    />
+</Link>
+)
 
 export const Hero: React.FC = () => {
     return (

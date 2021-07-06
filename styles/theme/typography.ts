@@ -30,8 +30,8 @@ export const textStyles = {
         fontWeight: "normal",
         lineHeight: "140%"
     },
-    fLabel: {
-        fontSize: {base: '16px', md: '18px', lg: '20px'},
+    footer: {
+        fontSize: fluidType(18, 20),
         fontWeight: "normal",
         lineHeight: "125%"
     },

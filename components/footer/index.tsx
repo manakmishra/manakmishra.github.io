@@ -2,13 +2,15 @@ import {
     Box,
     Text,
     Flex,
+    Link,
     useColorModeValue,
 } from '@chakra-ui/react';
 import { Logo } from '../svgs/logo';
+import { clamp } from '../../hooks/FluidResponsive';
 
 export default function Footer() {
     return (
-        <Box py={10}>
+        <Box pb={10} pt={{base: "40px", md: "60px"}}>
             <Flex
                 align={'center'}
                 _before={{
@@ -25,11 +27,13 @@ export default function Footer() {
                     flexGrow: 1,
                     ml: 8,
             }}>
-                <Logo boxSize={{base: "2.75rem", lg: "3rem"}} />
+                <Logo />
             </Flex>
-            <Text pt={6} textAlign={'center'} textStyle="fLabel" mx={2}>
-                Built with Next.js & Chakra UI. <br />
-                © 2021
+            <Text pt={clamp(0.75, 5, 1.5)} textAlign={'center'} textStyle="fLabel" mx={2}>
+                <Link variant='noStyle' href="https://github.com/manakmishra/portfolio" isExternal> 
+                    Built with Next.js & Chakra UI. 
+                </Link> <br />
+                © 2021 Manak Mishra
             </Text>
         </Box>
     );

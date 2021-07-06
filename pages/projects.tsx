@@ -3,8 +3,8 @@ import {
     VStack,
     Text
 } from '@chakra-ui/react';
-import { Construction } from '../components/svg';
-import Container from '../components/Container';
+import { Construction } from '../components/svgs/wip';
+import Container from '../components/container';
 
 const UnderConstruction: React.FC = () => {
     return (

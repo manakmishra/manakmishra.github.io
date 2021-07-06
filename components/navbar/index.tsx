@@ -1,7 +1,7 @@
 import React from "react";
 import { HiMenuAlt2, HiOutlineX } from 'react-icons/hi';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import { Logo } from './svg';
+import { Logo } from '../svgs/logo';
 import { 
   Box,
   Link,
@@ -19,7 +19,7 @@ import {
   useDisclosure
 } from "@chakra-ui/react";
 import NextLink from 'next/link';
-import { clamp } from "../hooks/FluidResponsive";
+import { clamp } from "../../hooks/FluidResponsive";
 import styled from "@emotion/styled";
 
 const MenuItem = ({ children, to = "/" }: any) => {
@@ -117,7 +117,7 @@ const SideNav = ({ toRef, children }: any) => {
 
 const NavMenu = ({ onOpen, ...props }: any) => {
   const { isOpen, onClose } = useDisclosure();
-  const [toRef, setToRef] = React.useState();
+  const [ toRef ] = React.useState();
 
   return (
     <Box as="nav">
@@ -139,11 +139,13 @@ const StickyNav = styled(Flex)`
   position: sticky;
   z-index: 99;
   top: 0;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(20px);
   transition: height .5s, line-height .5s;
 `;
 
-export const NavBar = (props: any) => {
+const NavBar = (props: any) => {
+  const navigationBackground = useColorModeValue('rgba(250, 250, 250, 0.60)', 'rgba(40, 44, 52, 0.60)');
+
   return (
     <StickyNav
       py={`calc(12px + 1em)`}
@@ -152,6 +154,7 @@ export const NavBar = (props: any) => {
       justifyContent="space-between"
       alignItems="center"
       flexDirection="row"
+      bgColor={navigationBackground}
     >
       <NavMenu />
         <NextLink href="/" passHref>
@@ -172,3 +175,5 @@ export const NavBar = (props: any) => {
     </StickyNav>
   );
 }
+
+export default NavBar;

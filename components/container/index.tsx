@@ -4,9 +4,9 @@ import {
     Flex,
     Stack
 } from '@chakra-ui/react';
-import Footer from './Footer';
-import { NavBar } from './NavBar';
-import { clamp } from '../hooks/FluidResponsive';
+import Footer from '../footer';
+import NavBar from '../navbar';
+import { clamp } from '../../hooks/FluidResponsive';
 
 //Temporarily removed footer from container
 

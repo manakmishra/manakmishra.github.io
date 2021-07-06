@@ -20,14 +20,14 @@ const Container: React.FC = ({ children }) => {
                 flexDirection="column"
                 bg={useColorModeValue('background.light', 'background.dark')}
                 color={useColorModeValue('foreground.light', 'foreground.dark')}
-                mt={clamp(3, 8.33, 7)}
+                mt={clamp('3rem', '8.33vw', '7rem')}
             >
                 <Stack
                     as="main"
                     spacing={8}
                     justifyContent='center'
                     alignItems='flex-start'
-                    mx={clamp(1.5, 6.5, 7)}
+                    mx={clamp('1.5rem', '6.5vw', '7rem')}
                 >
                     { children }
                 </Stack>

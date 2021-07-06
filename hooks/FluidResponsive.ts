@@ -1,5 +1,5 @@
-export const clamp = (minValue: number, prefValue: number, maxValue: number) => {
-    return `clamp(${minValue}rem, ${prefValue}vw, ${maxValue}rem)`;
+export const clamp = (minValue: string, prefValue: string, maxValue: string) => {
+    return `clamp(${minValue}, ${prefValue}, ${maxValue})`;
 }
 
 export const fluidType = (minFont: number, maxFont: number) => {

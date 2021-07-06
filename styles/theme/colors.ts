@@ -38,5 +38,9 @@ export const colors = {
     foreground: {
         light: '#383A42',
         dark: '#DCDFE4'
+    },
+    seperator: {
+        light: '#383A424D',
+        dark: '#DCDFE44D'
     }
 };

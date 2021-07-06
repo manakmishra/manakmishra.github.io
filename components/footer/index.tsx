@@ -16,20 +16,20 @@ export default function Footer() {
                 _before={{
                     content: '""',
                     borderBottom: '1px solid',
-                    borderColor: useColorModeValue('foreground.light', 'foreground.dark'),
+                    borderColor: useColorModeValue('seperator.light', 'seperator.dark'),
                     flexGrow: 1,
                     mr: 8,
                 }}
                 _after={{
                     content: '""',
                     borderBottom: '1px solid',
-                    borderColor: useColorModeValue('foreground.light', 'foreground.dark'),
+                    borderColor: useColorModeValue('seperator.light', 'seperator.dark'),
                     flexGrow: 1,
                     ml: 8,
-            }}>
+                }}>
                 <Logo />
             </Flex>
-            <Text pt={clamp(0.75, 5, 1.5)} textAlign={'center'} textStyle="fLabel" mx={2}>
+            <Text pt={clamp('0.75rem', '5vw', '1.5rem')} textAlign={'center'} textStyle="fLabel" mx={2}>
                 <Link variant='noStyle' href="https://github.com/manakmishra/portfolio" isExternal> 
                     Built with Next.js & Chakra UI. 
                 </Link> <br />

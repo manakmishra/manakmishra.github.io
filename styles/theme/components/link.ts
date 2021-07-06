@@ -23,7 +23,7 @@ export const Link = {
           textDecoration: 'none'
         }
       }),
-      nav: (props: ThemeComponentProps) => ({
+      secondary: (props: ThemeComponentProps) => ({
         color: mode('foreground.light', 'foreground.dark')(props),
         textDecoration: 'none',
         _hover: {

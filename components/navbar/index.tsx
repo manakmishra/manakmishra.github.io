@@ -25,7 +25,7 @@ import styled from "@emotion/styled";
 const MenuItem = ({ children, to = "/" }: any) => {
   return (
     <NextLink href={to} passHref>
-      <Link variant="nav">
+      <Link variant="secondary">
         <Text textStyle="navBarLabel" px={6} py={1}>
           {children}
         </Text>
@@ -149,7 +149,7 @@ const NavBar = (props: any) => {
   return (
     <StickyNav
       py={`calc(12px + 1em)`}
-      px={`calc(${clamp(1.5, 6.5, 7)} - 16px + 0.5em)`}
+      px={`calc(${clamp('1.5rem', '6.5vw', '7rem')} - 16px + 0.5em)`}
       mt={{base: '0', md: '1.25rem'}}
       justifyContent="space-between"
       alignItems="center"

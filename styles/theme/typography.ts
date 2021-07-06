@@ -21,14 +21,14 @@ export const textStyles = {
         letterSpacing: "-0.0525em"
     },
     body: {
-        fontSize: fluidType(24, 32),
+        fontSize: fluidType(16, 20),
         fontWeight: "normal",
         lineHeight: "125%"
     },
-    title: {
+    largeBody: {
         fontSize: fluidType(24, 32),
         fontWeight: "normal",
-        lineHeight: "140%"
+        lineHeight: "125%"
     },
     footer: {
         fontSize: fluidType(18, 20),
@@ -43,5 +43,10 @@ export const textStyles = {
         fontSize: fluidType(24, 48),
         fontWeight: "medium",
         lineHeight: "125%"
-    }
+    },
+    sectionTitle: {
+        fontSize: fluidType(36, 48),
+        fontWeight: "medium",
+        lineHeight: "125%"
+    },
 }

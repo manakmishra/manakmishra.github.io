@@ -30,20 +30,20 @@ const SocialLink = ({ icon, to }: any) => (
 </Link>
 )
 
-export const Hero: React.FC = () => {
+export default function Hero() {
     return (
         <>
         <Stack justifyContent="flex-start" alignItems="flex-start" mb={10}>
-            <Text textStyle="body">Hey There! I'm - </Text>
+            <Text textStyle="largeBody">Hey There! I'm - </Text>
             <Text textStyle="name">
                 manak mishra.
             </Text>
             <Box>
                 <Text 
                     w={{base: "100%", md: "90%", lg: "80%", xl: "60%"}} 
-                    mt={clamp(1.5, 6.67, 2.125)}
+                    mt={clamp('1.5rem', '6.67vw', '2.125rem')}
                     mb={8} 
-                    textStyle="title"
+                    textStyle="largeBody" lineHeight="140%"
                 >
                     I’m currently a senior at <Link href="https://www.lnmiit.ac.in" variant="primary" isExternal>LNMIIT Jaipur</Link> studying Communication and Computer Engineering. I’m a self taught developer who loves building software and solving problems.
                 </Text>

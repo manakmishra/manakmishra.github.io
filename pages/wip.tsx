@@ -1,6 +1,5 @@
 import React from 'react';
-import { 
-    Center,
+import {
     VStack,
     Text
 } from '@chakra-ui/react';
@@ -11,14 +10,12 @@ const UnderConstruction: React.FC = () => {
     return (
         <>
             <Container>
-                <Center h="60vh" w="100vw">
-                    <VStack textAlign="center" spacing="4">
-                        <Construction boxSize="8rem" />
-                            <Text textStyle="wip">
-                                This site is currently under construction.
-                            </Text>
-                    </VStack>
-                </Center>
+                <VStack textAlign="center" spacing="4" my={16} alignSelf='center'>
+                    <Construction boxSize="8rem" />
+                    <Text textStyle="wip">
+                        This site is currently under construction.
+                    </Text>
+                </VStack>
             </Container>
         </>
     );
